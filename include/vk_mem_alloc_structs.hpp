@@ -1371,6 +1371,8 @@ namespace VMA_HPP_NAMESPACE {
     Pool pool = {};
     VULKAN_HPP_NAMESPACE::DeviceSize maxBytesPerPass = {};
     uint32_t maxAllocationsPerPass = {};
+    PFN_vmaCheckDefragmentationBreakFunction VMA_NULLABLE pfnBreakCallback;
+    void* VMA_NULLABLE pBreakCallbackUserData;
   };
   VULKAN_HPP_STATIC_ASSERT(sizeof(DefragmentationInfo) == sizeof(VmaDefragmentationInfo),
                            "struct and wrapper have different size!");
